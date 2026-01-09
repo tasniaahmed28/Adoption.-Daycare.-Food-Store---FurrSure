@@ -1,0 +1,51 @@
+.register-form {
+    display: flex;
+     width: 70vw;
+     height: 80vh;
+     margin:auto;
+     flex-direction: column;
+     justify-content: flex-start;
+     background-color: white;
+     margin-top: 8vh;
+     padding:1rem 2rem;
+     border-radius: 20px;
+ }  
+
+.register-form-group {
+      margin-bottom: 5.5rem;
+      position:relative;   
+     
+      margin-top: 2rem;
+ }
+
+ .register-header
+    {
+        text-align: center;
+        margin-top: 2rem;
+    
+    }
+
+.register-form-group input {
+    margin-bottom: 2rem;
+}
+
+.register-form-group input:last-child {
+    margin-bottom: 0;
+}
+.register-btn {
+    padding:1rem
+}
+.register-btn:hover {
+    background-color: #C96F48;
+    cursor: pointer;
+}
+#role{
+   
+    padding:0.5rem;
+    position: absolute;
+   
+    top: 400px;
+    left: 0;
+    
+
+}

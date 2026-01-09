@@ -1,0 +1,325 @@
+﻿/* --- 🌟 Main Container & Background --- */
+.packages-container {
+  padding: 60px 20px;
+  min-height: 100vh;
+  /* Soft, warm professional gradient */
+  background: linear-gradient(135deg, #fffcf6 0%, #f3e7e9 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3436;
+}
+
+h2 {
+  text-align: center;
+  color: #2d3436;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* --- 📅 Professional Date Picker Section --- */
+.date-picker-wrapper {
+  background: #ffffff;
+  padding: 25px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+}
+
+.date-label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #636e72;
+  margin-bottom: 15px;
+}
+
+.styled-date-input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 50px; /* Pill shape */
+  outline: none;
+  background-color: #fafafa;
+  color: #2d3436;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.styled-date-input:focus {
+  border-color: #6c5ce7; /* Admin Purple Focus */
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(108, 92, 231, 0.1);
+}
+
+/* Status Text below date */
+.availability-status {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  min-height: 24px; /* Prevents layout jump */
+}
+
+/* --- 📦 Card Grid --- */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- 🃏 Individual Card Styling --- */
+.package-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect: Lift up slightly */
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative top bar for each card */
+.package-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #dfe6e9; /* Default Gray */
+}
+
+/* Specific colors for card tiers */
+.package-card:nth-child(1)::before { background: #74b9ff; } /* Blue for Basic */
+.package-card:nth-child(2)::before { background: #fdcb6e; } /* Gold for Premium */
+.package-card:nth-child(3)::before { background: #6c5ce7; } /* Purple for Luxury */
+
+.package-card h3 {
+  color: #2d3436;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #6c5ce7;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.duration {
+  font-size: 1rem;
+  color: #b2bec3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #636e72;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.features li {
+  padding: 8px 0;
+  color: #636e72;
+  border-bottom: 1px dashed #dfe6e9;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+/* --- 🔘 Button Styling --- */
+.select-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Disabled state handled in JS inline styles, but base styles here */
+/* --- 🆕 MODAL STYLES (The Professional Popup) --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures it's on top of everything */
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-title {
+  color: #2d3436;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.modal-label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #636e72;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 25px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.modal-input:focus {
+  border-color: #6c5ce7; /* Admin Purple */
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.btn-modal {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-cancel {
+  background-color: #dfe6e9;
+  color: #636e72;
+}
+.btn-cancel:hover { background-color: #b2bec3; }
+
+.btn-confirm {
+  background-color: #6c5ce7;
+  color: white;
+}
+.btn-confirm:hover { background-color: #5a4ad1; }
+
+/* Animations for smooth appearance */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+
+
+/* --- ✅ SUCCESS MODAL STYLES --- */
+.success-icon {
+  font-size: 4rem;
+  color: #00b894;
+  margin-bottom: 15px;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: block;
+}
+
+.success-message {
+  font-size: 1.2rem;
+  color: #2d3436;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.btn-success {
+  background-color: #00b894;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #00a884;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+
+/* ---  ERROR STYLES (Inline Validation) --- */
+.modal-input.input-error {
+  border-color: #d63031 !important; /* Red Border */
+  background-color: #fff5f5; /* Light Red Background */
+  animation: shake 0.3s ease-in-out; /* Subtle shake effect */
+}
+
+.error-message {
+  color: #d63031;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  margin-top: -20px; /* Pull it closer to the input */
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Shake Animation for visual feedback */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

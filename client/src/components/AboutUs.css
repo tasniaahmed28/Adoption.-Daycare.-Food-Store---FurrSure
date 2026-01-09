@@ -1,0 +1,91 @@
+/* --- Light Mode (Default) --- */
+.about-container {
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #2d3436;
+  min-height: 80vh;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 0 0 50px 50px; /* Slight curve at the bottom */
+}
+
+.about-hero h1 { 
+  font-size: 3rem; 
+  margin-bottom: 10px; 
+  font-weight: 800;
+}
+
+.about-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.mission-box {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mission-box h2 { 
+  font-size: 2.2rem; 
+  color: #6c5ce7; 
+  margin-bottom: 20px; 
+}
+
+.mission-box p { 
+  font-size: 1.2rem; 
+  line-height: 1.8; 
+  color: #636e72; 
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.value-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.value-card:hover { 
+  transform: translateY(-10px); 
+}
+
+.value-card span { 
+  font-size: 3rem; 
+  display: block; 
+  margin-bottom: 15px; 
+}
+
+/* --- ✅ Dark Mode Adjustments --- */
+.dark-mode .about-container {
+  color: #e6e6e6; /* Match layout.js text color */
+}
+
+.dark-mode .mission-box h2 {
+  color: #a29bfe; /* Lighter purple for dark background */
+}
+
+.dark-mode .mission-box p {
+  color: #b2bec3;
+}
+
+.dark-mode .value-card {
+  background: #0f3460; /* Match layout.js dark card background */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  color: #e6e6e6;
+}
+
+.dark-mode .about-hero {
+  background: linear-gradient(135deg, #4834d4 0%, #686de0 100%);
+}

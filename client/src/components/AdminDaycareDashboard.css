@@ -1,0 +1,110 @@
+﻿/* --- AdminDaycareDashboard.css --- */
+
+.daycare-admin-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.page-title {
+  text-align: center;
+  color: #2d3436;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* --- THE TABLE --- */
+.table-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+  border: 1px solid #dfe6e9;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table thead {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.styled-table th {
+  padding: 18px 20px;
+  text-align: left;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.styled-table td {
+  padding: 16px 20px; /* More breathing room */
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* --- 🕒 DATE & TIME FIX (The Important Part) --- */
+.datetime-box {
+  display: flex;
+  flex-direction: column; /* Stacks them vertically */
+  gap: 4px; /* Space between date and time */
+}
+
+.date-primary {
+  font-weight: 700;
+  color: #2d3436;
+  font-size: 0.95rem;
+}
+
+.time-secondary {
+  font-size: 0.85rem;
+  color: #636e72;
+  background-color: #f1f2f6; /* Light grey pill background */
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: fit-content; /* Only as wide as the text */
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* --- BADGES --- */
+.status-badge {
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-in { background-color: #e6fffa; color: #00b894; border: 1px solid #00b894; }
+.badge-out { background-color: #f1f2f6; color: #b2bec3; border: 1px solid #dfe6e9; }
+.badge-confirmed { background-color: #e3f2fd; color: #0984e3; border: 1px solid #0984e3; }
+
+/* --- BUTTONS --- */
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.btn-checkin { background-color: #00b894; color: white; }
+.btn-checkin:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,184,148,0.3); }
+
+.btn-checkout { background-color: #d63031; color: white; }
+.btn-checkout:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(214,48,49,0.3); }

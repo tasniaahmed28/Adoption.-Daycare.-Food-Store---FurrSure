@@ -1,0 +1,43 @@
+.otp-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.otp-container h2 {
+  margin-bottom: 0.5rem;
+}
+
+.otp-container p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.otp-container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 6px;
+  margin-bottom: 1rem;
+}
+
+.otp-container button {
+  width: 100%;
+  padding: 12px;
+  background: #2c5530;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.back-btn {
+  margin-top: 10px;
+  background: none;
+  color: #555;
+  cursor: pointer;
+}
+
+.otp-error {
+  color: red;
+  margin-bottom: 1rem;
+}
